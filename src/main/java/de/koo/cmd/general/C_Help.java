@@ -9,6 +9,7 @@ import org.javacord.api.entity.message.embed.EmbedBuilder;
 import org.javacord.api.event.message.MessageCreateEvent;
 import org.javacord.api.listener.message.MessageCreateListener;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -40,6 +41,7 @@ public class C_Help implements MessageCreateListener {
                     .addField("Moderation", "``Not four silly little users``")
                     .addField("Hololive", "``Godlike``")
                     .addField("▆ ▆ ▆ ▆ ▆ ▆ ▆ ▆ ▆ ▆ ▆ ▆ ", "# Note: If something goes wrong, join our [help server.](https://discord.gg/vmXC7f2HHK)")
+                    .setColor(Color.CYAN)
                     .setFooter("Requested by " + event.getMessageAuthor().getName())
             );
         } else if(message[0].equalsIgnoreCase(StringManager.PREFIX + "help") && message.length == 2 && !tool.isNumber(message[1])) {
